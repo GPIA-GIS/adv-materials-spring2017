@@ -7,14 +7,23 @@ window.addEventListener('load', function() {
             'height:' + window.innerHeight + 'px;}';
     }
     w.addEventListener('resize', set);
-    w.addEventListener('scroll', function update() {
+    w.addEventListener('scroll', function update(e) {
         cur = Math.floor(w.scrollY / w.innerHeight);
         if (w.location.hash !== cur) w.location.hash = cur;
+        e.preventDefault();
     });
-    //d.addEventListener('click', function() { go(++cur); });
+    w.addEventListener('DOMMouseScroll', function(e) {
+        e.preventDefault();
+    });
     d.addEventListener('keydown', function(e) {
-        if (e.which === 39) go(Math.min(++cur));
-        if (e.which === 37) go(Math.max(0, --cur));
+        if (e.which === 39 || e.which === 34) {
+            go(Math.min(++cur));
+            e.preventDefault();
+        }
+        if (e.which === 37 || e.which === 33) {
+            go(Math.max(0, --cur));
+            e.preventDefault();
+        }
     });
     function hash() {
         return Math.max(parseInt(window.location.hash.substring(1), 10), 0);
