@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 3 | Advanced GIS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Advanced GIS, Lecture 3</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Advanced GIS</h1>
+            <p>Class 3</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartodb-layers.png);">
+            <h2>layers</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartodb-georeferencing.png);">
+            <h2>georeferencing</h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>CartoCSS recap</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="code"><code>#earthquakes {
+    marker-width: 3;
+    ...
+    [zoom &gt;= 10] {
+        marker-width: 8;
+    }
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="code" style="font-size: 50px; line-height: 70px;"><code>#earthquakes {
+    marker-width: 3;
+    ...
+    [place = 'South of Panama'] {
+        marker-width: 8;
+    }
+}</code></pre>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>combine conditions with <em>,</em> to set properties with <em>either</em> condition</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 50px; line-height: 70px;"><code>#earthquakes {
+    marker-width: 3;
+    ...
+    [mag &gt; 5.5],
+    [place = 'South of Panama'] {
+        marker-width: 15;
+    }
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <p style="padding: 0;">shortcut for:</p>
+            <pre style="font-size: 50px; line-height: 70px;"><code>#earthquakes {
+    marker-width: 3;
+    ...
+    [mag &gt; 5.5] {
+        marker-width: 15;
+    }
+    [place = 'South of Panama'] {
+        marker-width: 15;
+    }
+}</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartocss-conditions-or.png);">
+        </div>
+
+        <div class="slide">
+            <h2 style="font-size: 100px; line-height: 120px;">give earthquakes with <code>place =</code> <em>South of Africa</em> and earthquakes with <code>mag</code> over <em>5</em> larger widths than the rest</h2>
+        </div>
+
+        <div class="slide">
+            <h2>combine conditions <em>without</em> a <em>,</em> to set properties with <em>both</em> conditions</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px; line-height: 60px;"><code>#earthquakes {
+    marker-width: 3;
+    ...
+    [mag &gt; 4][place = 'South of Panama'] {
+        marker-width: 15;
+    }
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px; line-height: 60px;"><code>#earthquakes {
+    marker-width: 3;
+    ...
+    [mag &gt; 4][place = 'South of Panama'] {
+        marker-width: 15;
+    }
+}</code></pre>
+            <p>make markers where mag is greater than 4 <em>and</em> place = "South of Panama" larger</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartocss-conditions-and.png);">
+        </div>
+
+        <div class="slide">
+            <h2 style="font-size: 100px; line-height: 120px;">give earthquakes in <em>South of Africa</em> with <code>mag</code> over <em>5</em> larger widths than the rest</h2>
+        </div>
+
+        <div class="slide">
+            <h2>recap</h2>
+        </div>
+
+        <div class="slide">
+            <h2>conditional statements look like</h2>
+            <pre><code>[mag &gt;= 5.5] {
+    ...
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>restrict statements more by putting conditions next to each other</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>[mag &gt;= 5.5][mag &lt; 7] {
+    ...
+}</code></pre>
+            <p><em>both</em> conditions must be true</p>
+        </div>
+
+        <div class="slide">
+            <h2>include more features by separating conditions with <em>,</em></h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>[mag &gt;= 5.5],
+[zoom &gt;= 10] {
+    ...
+}</code></pre>
+            <p><em>either</em> condition could be true</p>
+        </div>
+
+        <div class="slide">
+            <h2>you can use as many of these as you need to</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 50px; line-height: 60px;"><code>#earthquakes {
+    [mag &gt;= 7] {
+        ...
+    }
+    [zoom &gt;= 11] {
+        ...
+    }
+    [zoom &gt;= 12] {
+        ...
+    }
+    ...
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>you can split them up more if you prefer</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 50px; line-height: 60px;"><code>#earthquakes[mag &gt;= 7] {
+    ...
+}
+#earthquakes[zoom &gt;= 11] {
+    ...
+}
+#earthquakes[zoom &gt;= 12] {
+    ...
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>matching text within an attribute</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>[place =~ ".*Africa.*"] {
+     marker-width: 15;
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>[place =~ ".*Africa.*"] {
+     marker-width: 15;
+}</code></pre>
+            <p>style features with "Africa" anywhere in the <code>place</code> field</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/shibani1.png);">
+            <a class="source" href="https://shibani.cartodb.com/viz/d83e3d2e-ce09-11e5-a1d6-0ecfd53eb7d3/public_map">
+                Shibani
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/shibani2.png);">
+            <a class="source" href="https://shibani.cartodb.com/viz/d83e3d2e-ce09-11e5-a1d6-0ecfd53eb7d3/public_map">
+                Shibani
+            </a>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 15px; line-height: 25px;"><code>[zoom >=6][name ='Salt Lake City'],[name ='Las Vegas'],[name ='Los Angeles'],[name ='San Luis Obispo'],[name ='San Francisco']{
+    marker-fill: #FFCC00;
+    ...
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 25px; line-height: 35px;"><code>[zoom >=6][name ='Salt Lake City'],[name ='Las Vegas'] {
+    marker-fill: #FFCC00;
+    ...
+}</code></pre>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <pre style="font-size: 40px; line-height: 50px;"><code>#earthquakes {
+    marker-width: 5;
+    marker-fill: #ff307a;
+    marker-allow-overlap: true;
+
+    [zoom &gt;= 4] {
+        marker-width: 10;
+    }
+    [zoom &gt;= 8] {
+        marker-width: 15;
+    }
+    [zoom &gt;= 12] {
+        marker-width: 20;
+    }
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>what if I want to change marker-width?</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px; line-height: 50px;"><code>#earthquakes {
+    marker-width: 6;
+    marker-fill: #ff307a;
+    marker-allow-overlap: true;
+
+    [zoom &gt;= 4] {
+        marker-width: 12;
+    }
+    [zoom &gt;= 8] {
+        marker-width: 18;
+    }
+    [zoom &gt;= 12] {
+        marker-width: 24;
+    }
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>there's a better way!</h2>
+        </div>
+
+        <div class="slide">
+            <h2>variables</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px; line-height: 50px;"><code><em>@width: 6;</em>
+#earthquakes {
+    marker-width: <em>@width</em>;
+    marker-fill: #ff307a;
+    marker-allow-overlap: true;
+
+    [zoom &gt;= 4] {
+        marker-width: 12;
+    }
+    [zoom &gt;= 8] {
+        marker-width: 18;
+    }
+    [zoom &gt;= 12] {
+        marker-width: 24;
+    }
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px; line-height: 50px;"><code><em>@width: 6;</em>
+#earthquakes {
+    marker-width: <em>@width</em>;
+    marker-fill: #ff307a;
+    marker-allow-overlap: true;
+
+    [zoom &gt;= 4] {
+        marker-width: <em>@width * 2</em>;
+    }
+    [zoom &gt;= 8] {
+        marker-width: <em>@width * 3</em>;
+    }
+    [zoom &gt;= 12] {
+        marker-width: <em>@width * 4</em>;
+    }
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>then I can change all the widths at once</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px; line-height: 50px;"><code><em>@width: 8;</em>
+#earthquakes {
+    marker-width: @width;
+    marker-fill: #ff307a;
+    marker-allow-overlap: true;
+
+    [zoom &gt;= 4] {
+        marker-width: @width * 2;
+    }
+    [zoom &gt;= 8] {
+        marker-width: @width * 3;
+    }
+    [zoom &gt;= 12] {
+        marker-width: @width * 4;
+    }
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>it works with colors, too</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code><em>@quakecolor: #ff307a;</em>
+#earthquakes {
+    marker-width: @width;
+    marker-fill: <em>@quakecolor</em>;
+    marker-line-color: <em>@quakecolor</em>;
+    marker-line-opacity: 0.2;
+    marker-allow-overlap: true;
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px; line-height: 45px;"><code><em>@quakecolor: #ff307a;</em>
+#earthquakes {
+    marker-width: @width;
+    marker-fill: <em>fadeout(@quakecolor, 25%)</em>;
+    marker-line-color: <em>@quakecolor</em>;
+    marker-line-opacity: 0.2;
+    marker-allow-overlap: true;
+}</code></pre>
+            <a class="source" href="http://docs.cartodb.com/cartodb-platform/cartocss/properties/#color">other color functions</a>
+        </div>
+
+        <div class="slide">
+            <h2>use a variable for one of your numeric properties</h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>please download the <em>education</em> and <em>boundary</em> shapefiles from <a style="font-size: 80px;" href="http://mapkibera.org/download/">mapkibera.org/download</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartodb-filters.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartodb-filters-specific.gif);">
+        </div>
+
+        <div class="slide">
+            <h2>but I wanted <em>6.5</em>!</h2>
+        </div>
+
+        <div class="slide">
+            <h2>SQL</h2>
+        </div>
+
+        <div class="slide">
+            <h2>SQL</h2>
+            <h2>Structured Query Language</h2>
+        </div>
+
+        <div class="slide">
+            <h2>SQL</h2>
+            <h2>the language databases understand</h2>
+        </div>
+
+        <div class="slide">
+            <h2>you'll use SQL in two ways:</h2>
+        </div>
+
+        <div class="slide">
+            <h2>1. pulling data out of the database</h2>
+        </div>
+
+        <div class="slide">
+            <h2>2. changing the data in the database</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartodb-table.png);">
+        </div>
+
+        <div class="slide">
+            <img style="float: left; max-width: 50%;" src="img/paper.jpg" />
+        </div>
+
+        <div class="slide">
+            <img style="float: left; max-width: 50%;" src="img/paper.jpg" />
+            <div style="float: left; width: 50%;">
+                <div style="margin-left: 25px;">
+                    <p>Give me the pages that refer to properties in Brooklyn.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img style="float: left; max-width: 50%;" src="img/paper.jpg" />
+            <div style="float: left; width: 50%;">
+                <div style="margin-left: 25px;">
+                    <p>Give me the addresses of the properties in Brooklyn.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img style="float: left; max-width: 50%;" src="img/paper.jpg" />
+            <div style="float: left; width: 50%;">
+                <div style="margin-left: 25px;">
+                    <p>Give me the addresses of the properties in Brooklyn that have been built on since 1950.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>databases are great at these types of questions</h2>
+        </div>
+
+        <div class="slide">
+            <h2>it's what they were made for</h2>
+        </div>
+
+        <div class="slide">
+            <h2>SQL helps you ask these questions in a way databases understand</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartodb-table.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartodb-table-select.png);">
+        </div>
+
+        <div class="slide">
+            <h2><code>SELECT</code>: choose columns from a table</h2>
+        </div>
+
+        <div class="slide">
+            <p>just list the columns. for example:</p>
+            <pre><code>SELECT students, teachers
+FROM education</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2><code>SELECT *</code>: choose <em>all</em> columns</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartodb-table-where.png);">
+        </div>
+
+        <div class="slide">
+            <h2><code>WHERE</code>: choose rows from a table</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartodb-table-select-and-where.png);">
+        </div>
+
+        <div class="slide">
+            <p>these conditions are the same as the ones in CartoCSS:</p>
+            <pre style="margin-left: 250px;"><code>&gt;
+&lt;
+=
+!=
+&gt;=
+&lt;=</code></pre>
+        </div>
+
+        <div class="slide">
+            <p>for example:</p>
+            <pre><code>SELECT *
+FROM education
+WHERE students &gt; 100</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>and you combine them with <code>AND</code> / <code>OR</code></h2>
+        </div>
+
+        <div class="slide">
+            <p>for example:</p>
+            <pre><code>SELECT *
+FROM education
+WHERE students &gt; 100
+    AND students &lt; 200</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>get just the education features  with <code>students</code> between 100 and 150</h2>
+        </div>
+
+        <div class="slide">
+            <h2>or you can negate a condition with <code>NOT</code></h2>
+        </div>
+
+        <div class="slide">
+            <p>for example:</p>
+            <pre><code>SELECT *
+FROM education
+WHERE NOT (students &gt; 100
+  OR op_type = 'religious')</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>get just the education features with <code>students</code> not between 100 and 150</h2>
+        </div>
+
+        <div class="slide">
+            <img style="width: 50%;" src="img/arc-query-builder.png" />
+        </div>
+
+        <div class="slide">
+            <img style="width: 50%; margin-top: 10%;" src="img/arc-query-builder-zoom.png" />
+        </div>
+
+        <div class="slide">
+            <h2><code>SELECT</code> does not change the table, it only changes your view of the table</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/playdoh-pasta.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/playdoh-smoosh.jpg);">
+        </div>
+
+        <div class="slide">
+            <h2>you can also use <code>SELECT</code> to get a better idea of what data is in your table</h2>
+        </div>
+
+        <div class="slide">
+            <p>count matching rows:</p>
+            <pre><code>SELECT COUNT(*)
+FROM education
+WHERE students &gt; 100
+  OR op_type = 'religious'</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>but you'll almost never want to use this statement for your map</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartodb-filters-nogeom.gif);">
+        </div>
+
+        <div class="slide">
+            <h2>get the number of education features with <code>students</code> between 100 and 150</h2>
+        </div>
+
+        <div class="slide">
+            <h2><code>SELECT</code> trick: <em>add "columns"</em> to your selection</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>SELECT *, 5
+FROM education</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>SELECT *, stdnt_fem / students
+FROM education</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>SELECT *,
+    (stdnt_fem / students) * 100
+FROM education</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>SELECT *,
+    (stdnt_fem / students) * 100
+    AS stdnt_fem_per
+FROM education</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2 style="text-decoration: line-through;">1. pulling data out of the database</h2>
+            <h2>2. changing the data in the database</h2>
+        </div>
+
+        <div class="slide">
+            <h2>you can also use SQL to quickly <code>UPDATE</code> or <code>DELETE</code> the data in your table</h2>
+        </div>
+
+        <div class="slide">
+            <h2>these <em>will</em> destroy data, so have a backup or test it with a table you don't need</h2>
+        </div>
+
+        <div class="slide">
+            <h2>this is one way to customize the way data is displayed in your infowindow</h2>
+        </div>
+
+        <div class="slide">
+            <h2>first, create a new column on your table</h2>
+        </div>
+
+        <div class="slide">
+            <h2>then put the desired data in that column, based on some condition</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>UPDATE education
+SET size = 'large'
+WHERE students &gt; 2500</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>DELETE FROM education
+WHERE ...</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>more in the SQL reference</h2>
+        </div>
+
+        <div class="slide">
+            <h2>SQL shows up everywhere online</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/web-sql-596.png);">
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/cartodb-types.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartodb-geometry.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/postgis-logo.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/postpostgis.png);">
+            <a class="source" href="https://twitter.com/postpostgis">
+                @postpostgis
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/postgres.png);">
+            <a class="source" href="http://www.postgresql.org/">
+                postgres
+            </a>
+        </div>
+
+        <div class="slide">
+            <pre><code>SELECT *,
+    (stdnt_fem / students) * 100
+    AS stdnt_fem_per
+FROM education</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>SELECT *, ST_area(the_geom)
+FROM kiberaboundary</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 35px; line-height: 45px;"><code>SELECT *,
+  ST_area(ST_transform(the_geom_webmercator, 21036))
+FROM kiberaboundary</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/buffer.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/other-projections.png);">
+            <a class="source" href="http://www.geopoliticalmapping.com/arctic-maps/">source</a>
+        </div>
+
+        <div class="slide">
+            <pre><code>SELECT cartodb_id,
+  ST_Transform(the_geom, 3573)
+    AS the_geom_webmercator
+FROM my_table</code></pre>
+        </div>
+
+    </body>
+</html>
