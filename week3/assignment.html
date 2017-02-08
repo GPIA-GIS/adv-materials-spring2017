@@ -5,110 +5,104 @@
     </head>
     <body>
         <main>
-            <header>
-                <a href="..">Advanced GIS</a>
-                <h1>Assignment 3: SQL</h1>
-            </header>
+        <header>
+            <a href="..">Advanced GIS</a>
+            <h1>Assignment 3: SQL</h1>
+        </header>
 
-            <section>
-                <h2>Resources</h2>
-                <p>An <a href="materials/sql-cheatsheet.pdf">SQL Reference</a> (pdf)</p>
-                <p><a href="https://www.youtube.com/watch?v=mPnuBG6wcAA">This video</a> on SQL in CartoDB might be helpful.</p>
-                <p><a href="http://docs.cartodb.com/tips-and-tricks.html">The power of CartoDB</a> is a handy list of SQL functions and techniques you can use in CartoDB.</p>
-                <p>If you want to learn all there is to know about SQL, <a href="http://sql.learncodethehardway.org/">Learn SQL The Hard Way</a> and <a href="http://sqlschool.modeanalytics.com/">SQL School</a> are good places to start.</p>
-            </section>
-
-            <section>
-                <h2>Part 1: SQL</h2>
-                <p>Write at least <strong>five</strong> SQL statements for one or two tables in your CartoDB account. Base them on a variety of the queries under Common Queries in the <a href="materials/sql-cheatsheet.pdf">SQL Reference</a>. Some should be mappable and some should be unmappable (eg, selecting the <code>COUNT</code> of a table, since that cannot be mapped).</p>
-                <p>Submit:</p>
-                <ul>
-                    <li>the SQL that you performed and</li>
-                    <li>the output of the SQL, either a screenshot of the resulting table or of the map, as appropriate.</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Part 2: Spatial SQL, Map Kibera</h2>
-                TODO maybe buffer and select instead?
-                <p>We're going to work through using SQL to locate features within other features using the Map Kibera data. This looks long, but that's mostly because we're going step-by-step. Follow along:</p>
-                <ol>
-                    <li>Download <a href="http://data.mapkibera.org/mapkibera/kibera/data/shapefile/education-shapefile.zip">education</a> and <a href="http://data.mapkibera.org/mapkibera/kibera/data/shapefile/boundary-shapefile.zip">boundaries</a> data if you don't already have them.</li>
-                    <li>Upload the education and boundaries data to CartoDB. Rename the boundaries table to <code>kiberaboundaries</code>.</li>
-                    <li>Let's try selecting boundaries by name:
-                        <ol>
-                            <li>Open the <code>kiberaboundaries</code> table.</li>
-                            <li>In the SQL tab enter the following:
-                                <pre><code class="language-sql">SELECT * 
+        <section>
+            <h2>Resources</h2>
+            <p>An <a id="" title="" href="materials/sql-cheatsheet.pdf">SQL Reference</a> (pdf)</p>
+            <p><a class="" href="https://www.youtube.com/watch?v=S_kNe24cO18">Analysis with CARTO</a></p>
+            <p><a class="" href="https://www.youtube.com/watch?v=XaZrKti3G-8">SQL with CARTO</a></p>
+            <p><a href="https://carto.com/docs/tips-and-tricks">The CARTO Tips and Tricks page</a> has a handy list of SQL functions and techniques you can use in CARTO and <a href="https://carto.com/learn/guides">the Guides page has a section covering Analysis</a>.</p>
+            <p>If you want to learn more about SQL in general (outside of CARTO and mapping), <a href="http://sql.learncodethehardway.org/">Learn SQL The Hard Way</a> and <a href="http://sqlschool.modeanalytics.com/">SQL School</a> are good places to start.</p>
+        </section>
+        <section>
+            <h2>Part 1: SQL</h2>
+            <p>Write at least <strong>five</strong> SQL statements for datasets in your CARTO account. Base them on a variety of the queries under Common Queries in the <a href="materials/sql-cheatsheet.pdf">SQL Reference</a>. Some should be mappable and some should be unmappable (eg, selecting the <code>COUNT</code> of a table, since that cannot be mapped).</p>
+            <p>Submit:</p>
+            <ul>
+                <li>the SQL that you performed,</li>
+                <li>what you wanted to find with the SQL, and</li>
+                <li>the output of the SQL, either a screenshot of the resulting dataset or of the map, as appropriate.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Part 2: Spatial SQL, Map Kibera</h2>
+            <p>We're going to work through using SQL to locate features within other features using the Map Kibera data. This looks long, but that's mostly because we're going step-by-step. Follow along:</p>
+            <ol>
+                <li>Download <a href="http://data.mapkibera.org/mapkibera/kibera/data/shapefile/education-shapefile.zip">education</a> and <a href="http://data.mapkibera.org/mapkibera/kibera/data/shapefile/boundary-shapefile.zip">bound</a><a href="http://data.mapkibera.org/mapkibera/kibera/data/shapefile/boundary-shapefile.zip">aries</a> data if you don't already have them.</li>
+                <li>Upload the education and boundaries data to CARTO. Rename the boundaries dataset to <code>kiberaboundaries</code>.</li>
+                <li>Let's try selecting boundaries by name:
+                    <ol>
+                        <li>Open the <code>kiberaboundaries</code> dataset.</li>
+                        <li>In the SQL tab enter the following:
+                            <pre>SELECT * 
 FROM kiberaboundaries
-WHERE name = 'Makina'</code></pre>
-                            </li>
-                            <li>Two rows should be shown. Click the <strong>Map View</strong> button to see just those features.</li>
-                            <li>Try another name from the table and see what the result is.</li>
-                        </ol>
-                    </li>
-                    <li>Now let's look at the education table:
-                        <ol>
-                            <li>Open the <code>education</code> table.</li>
-                            <li>In the SQL tab delete the old query and enter the following:
-                                <pre><code class="language-sql">SELECT *
+WHERE name = 'Makina'</pre>
+                        </li>
+                        <li>Two rows should be shown. Click the <strong>preview</strong> link to see just those features.</li>
+                        <li>Try another name from the dataset and see what the result is.</li>
+                    </ol>
+                </li>
+                <li>Now let's look at the education dataset:
+                    <ol>
+                        <li>Open the <code>education</code> dataset.</li>
+                        <li>In the SQL tab delete the old query and enter the following:
+                            <pre>SELECT *
 FROM education
-WHERE type = 'primary'</code></pre>
-                            </li>
-                            <li>Only the primary schools should show be displayed. Look at the <strong>Map View</strong>. This is not a required step, just making sure that the table is loaded correctly and SQL works.</li>
-                        </ol>
-                    </li>
-                    <li>We're going to join the <code>education</code> table with the <code>kiberaboundaries</code> table. While looking at the <code>education</code> table, delete the old SQL query and enter the following SQL:
-                        <pre><code class="language-sql">SELECT education.*
-FROM education, kiberaboundaries
-WHERE ST_within(education.the_geom, kiberaboundaries.the_geom)</code></pre>
-                        <p>Let's look at this statement line by line:
-                            <ol>
-                                <li>
-                                <pre><code class="language-sql">SELECT education.*</code></pre>
-                                    Selects all the columns from <code>education</code>.
-                                </li>
-                                <li>
-                                <pre><code class="language-sql">FROM education, kiberaboundaries</code></pre>
-                                    We want to have <code>education</code> for its columns, but we also want <code>kiberaboundaries</code> to be available for the next line.
-                                </li>
-                                <li>
-                                <pre><code class="language-sql">WHERE ST_within(education.the_geom, kiberaboundaries.the_geom)</code></pre>
-                                    Finally, we're only selecting the <code>education</code> rows where <code>the_geom</code> (the point for the row) is within one of the <code>kiberaboundaries</code> rows' <code>the_geom</code>.
-                                </li>
-                            </ol>
-                        </p>
-                    </li>
-                    <li>Since we're basically saying "select all the features in Kibera" and we know all the features are in Kibera, we should still see all the features. Look at <strong>Map View</strong> and confirm.</li>
-                    <li>To pick only <code>education</code> features that are within particular boundaries, now all we have to do is use conditions to pick those boundaries. Make your SQL query look like this:
-                        <pre><code class="language-sql">SELECT education.*
+WHERE type = 'primary'</pre>
+                        </li>
+                        <li>Only the primary schools should show be displayed. Look at the <strong>preview</strong>. This is not a required step, just making sure that the dataset is loaded correctly and SQL works.</li>
+                    </ol>
+                </li>
+                <li>We're going to join the <code>education</code> dataset with the <code>kiberaboundaries</code> dataset. While looking at the <code>education</code> dataset, delete the old SQL query and enter the following SQL:
+                    <pre>SELECT education.*
 FROM education, kiberaboundaries
 WHERE ST_within(education.the_geom, kiberaboundaries.the_geom)
-AND kiberaboundaries.name = 'Makina'</code></pre>
-                        <p>You should be able to add the last line (<code class="language-sql">AND kiberaboundaries.name = 'Makina'</code>) to the SQL you already have.</p>
-                        <p>The last line specifies that we only want to look at <code>kiberaboundaries</code> with the <code>name</code> attribute set to 'Makina'. So when the database is looking for <code>education</code> features to include, it only considers those that are <em>within</em> <code>kiberaboundaries</code> with this name.</p>
-                    </li>
-                    <li>
-                        Now that we have this query, we can change the name and see different <code>education</code> features appear on the map. In your SQL, replace <code>Makina</code> with <code>Ayany</code>. Confirm that only those features are selected by looking at the <strong>Map View</strong>.
-                    </li>
-                    <li>
-                    Finally, we can filter the <code>education</code> filters more by adding conditions to our query. Switch the <code>name</code> back to <code>Makina</code> and add the following line:
-                    <pre><code class="language-sql">AND education.type = 'primary'</code></pre>
-                        <p>Now we're only selecting <code>education</code> features in Makina that are primary schools.</p>
-                    </li>
-                </ol>
-                <p>That's it! You're using spatial SQL queries. Submit a screenshot with the result and your final code.</p>
-            </section>
-
-            <section>
-                <h2>Bonus: Advanced CartoCSS</h2>
-                <p>Take a look at the <a href="https://github.com/stamen/toner-carto/">CartoCSS behind</a> Stamen's base layer <a href="http://maps.stamen.com/toner/#12/37.7706/-122.3782">Toner</a>. Specifically look at the <a href="https://github.com/stamen/toner-carto/blob/master/labels.mss#L534-L562">airport labeling section</a>:</p>
-                <pre><code>#airports[zoom&gt;=10][zoom&lt;=13] {
+AND kiberaboundaries.name = 'Makina'</pre>
+                    <p>Let's look at this statement line by line:</p>
+                    <ol>
+                        <li>
+                            <pre>SELECT education.*</pre>
+                            Selects all the columns from <code>education</code>.</li>
+                        <li>
+                            <pre>FROM education, kiberaboundaries</pre>
+                            We want to have <code>education</code> for its columns, but we also want <code>kiberaboundaries</code> to be available for the next line.</li>
+                        <li>
+                            <pre>WHERE ST_within(education.the_geom, kiberaboundaries.the_geom)</pre>
+                            This joins the <code>education</code> rows where <code>the_geom</code> (the point for the row) is within one of the <code>kiberaboundaries</code> rows' <code>the_geom</code>, which is equivalent to a spatial join in a GIS.</li>
+                        <li>
+                            <pre>AND kiberaboundaries.name = 'Makina'</pre>
+                            Finally, we're only selecting the <code>kiberaboundaries</code> rows where <code>name</code> is Makina. Because of the join above, this will filter <code>education</code> rows to this</li>
+                    </ol>
+                </li>
+                <li>Look at <strong>preview</strong> and confirm that only <code>education</code> points in Makina appear.</li>
+                <li>Now that we have this query, we can change the name and see different <code>education</code> features appear on the map. In your SQL, replace <code>Makina</code> with <code>Ayany</code>. Confirm that only those features are selected by looking at the <strong>preview</strong>.</li>
+                <li>Finally, we can filter the <code>education</code> filters more by adding conditions to our query. Switch the <code>name</code> back to <code>Makina</code> and add the following line:
+                    <pre>AND education.type = 'primary'</pre>
+                    <p>Now we're only selecting <code>education</code> features in Makina that are primary schools.</p>
+                </li>
+            </ol>
+            <p>That's it! You're using spatial SQL queries. Submit a screenshot with the result and your final code.</p>
+        </section>
+        <section>
+            <h2>Part 3: Using Analyses for Spatial Filtering</h2>
+            <p>Using the <strong>Analysis</strong> feature in CARTO, do something similar to Part 2--filter a points layer to only show those in the polygons of another layer. Style and publish a map using the polygons and filtered points. You will want to at least use the <strong>Intersect second layer</strong> analysis on the points layer to filter.</p>
+            <p>&nbsp;</p>
+        </section>
+        <section>
+            <h2>(OPTIONAL) Bonus: Advanced CartoCSS</h2>
+            <p>Take a look at the <a href="https://github.com/stamen/toner-carto/">CartoCSS behind</a> Stamen's base layer <a href="http://maps.stamen.com/toner/#12/37.7706/-122.3782">Toner</a>. Specifically look at the <a href="https://github.com/stamen/toner-carto/blob/master/labels.mss#L534-L562">airport labeling section</a>:</p>
+            <pre><code>
+#airports[zoom&gt;=10][zoom&lt;=13] {
     marker-width: 18;
     marker-file: url('images/airplane.svg');
 }
 
-#airports[zoom&gt;=13][scalerank&lt;=12] {
+#airports[zoom&gt;=13][scalerank&lt;=12]
+{
     text-name: "[name]";
     [name="Tacoma Int'l"] {
       text-name: "Seattle-" + [name];
@@ -121,37 +115,37 @@ AND kiberaboundaries.name = 'Makina'</code></pre>
     text-wrap-width: 128;
     text-dy: 14;
     text-allow-overlap: true;
-  
-    [zoom&gt;=14] {
+  <br />    [zoom&gt;=14] {
         text-dy: 0;
     }
 }
 #airports {
-    text-name: "[name]";
-    text-face-name: @text_font_poi_bold;
-    text-fill: red;
-}</code></pre>
-                <p>Answer the following for up to 5 bonus points this week:</p>
-                <ol>
-                    <li>What does <strong>text-name</strong> do?</li>
-                    <li>How are airports displayed between zoom levels <strong>10</strong> and <strong>13</strong>?</li>
-                    <li>What is going on with <strong>Tacoma International</strong>? How will it be displayed at and above zoom level <strong>13</strong>?</li>
-                </ol>
-            </section>
+      text-name: "[name]";
+      text-face-name: @text_font_poi_bold;
+      text-fill: red;
+}
+            </code></pre>
+            <p>Answer the following for up to 5 bonus points this week:</p>
+            <ol>
+                <li>What does <strong>text-name</strong> do?</li>
+                <li>How are airports displayed between zoom levels <strong>10</strong> and <strong>13</strong>?</li>
+                <li>What is going on with <strong>Tacoma International</strong>? How will it be displayed at and above zoom level <strong>13</strong>?</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Submitting your work</h2>
+            <ul>
+                <li>Part 1: submit SQL used and the resulting screenshots.</li>
+                <li>Part 2: submit SQL used and the resulting screenshot.</li>
+                <li>Part 3: submit a public, published link to your map.</li>
+                <li>Bonus: submit the text of your answers, if any.</li>
+            </ul>
+            <p>You may optionally choose to include a short paragraph response or summary of your work.</p>
+        </section>
 
-            <section>
-                <h2>Submitting your work</h2>
-                <ul>
-                    <li>Part 1: submit SQL used and the resulting screenshots.</li>
-                    <li>Part 2: submit SQL used and the resulting screenshot.</li>
-                    <li>Bonus: submit the text of your answers, if any.</li>
-                </ul>
-                <p>You may optionally choose to include a short paragraph response or summary of your work.</p>
-            </section>
-
-            <footer>
-                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-            </footer>
+        <footer>
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+        </footer>
         </main>
     </body>
 </html>
