@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 4 | Advanced GIS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='http://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Advanced GIS, Lecture 4</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Advanced GIS</h1>
+            <p>Class 4</p>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/analysis-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/analysis-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/analysis-2.png);">
+            <h2>geocoding</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/analysis-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/analysis-3.png);">
+            <h2>buffer</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/analysis-4.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/analysis-4.png);">
+            <h2>convex hull</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/analysis-5.png);">
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>SQL</h2>
+        </div>
+
+        <div class="slide">
+            <p>What does this do?</p>
+            <pre><code>SELECT *
+FROM education</code></pre>
+        </div>
+
+        <div class="slide">
+            <p>And what does this do?</p>
+            <pre><code>SELECT *
+FROM education
+WHERE students &gt; 100</code></pre>
+        </div>
+
+        <div class="slide">
+            <img style="width: 50%;" src="img/arc-query-builder.png" />
+        </div>
+
+        <div class="slide">
+            <img style="width: 50%; margin-top: 10%;" src="img/arc-query-builder-zoom.png" />
+        </div>
+
+        <div class="slide">
+            <h2>SQL shows up everywhere online</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/airbnb.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/airbnb-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/airbnb-2.png);">
+            <pre style="margin-top:50px; background: rgba(255,255,255,0.8); display: inline-block; padding: 15px;"><code>SELECT *
+FROM rooms
+WHERE id=4789513</code></pre>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2 style="text-decoration: line-through;">1. pulling data out of the database</h2>
+            <h2>2. changing the data in the database</h2>
+        </div>
+
+        <div class="slide">
+            <h2>you can also use SQL to quickly <code>UPDATE</code> or <code>DELETE</code> the data in your table</h2>
+        </div>
+
+        <div class="slide">
+            <h2>these <em>will</em> destroy data, so have a backup or test it with a table you don't need</h2>
+        </div>
+
+        <div class="slide">
+            <h2>this is one way to customize the way data is displayed in your pop-ups</h2>
+        </div>
+
+        <div class="slide">
+            <h2>first, create a new column on your table</h2>
+        </div>
+
+        <div class="slide">
+            <h2>then put the desired data in that column, based on some condition</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>UPDATE education
+SET st_ratio = students / teachers</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>DELETE FROM education
+WHERE ...</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>SQL shows up everywhere online</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/other-projections.png);">
+            <a class="source" href="http://www.geopoliticalmapping.com/arctic-maps/">source</a>
+        </div>
+
+        <div class="slide">
+            <pre><code>SELECT cartodb_id,
+  ST_Transform(the_geom, 3573)
+    AS the_geom_webmercator
+FROM my_table</code></pre>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>map kibera</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kibera-satellite.png);">
+            <a class="source" href="http://tools.geofabrik.de/mc/#15/-1.3135/36.7922&num=4&mt0=mapnik&mt1=google-map&mt2=bing-map&mt3=mapnik-german">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kibera-google.png);">
+            <a class="source" href="http://tools.geofabrik.de/mc/#15/-1.3135/36.7922&num=4&mt0=mapnik&mt1=google-map&mt2=bing-map&mt3=mapnik-german">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kibera-osm.png);">
+            <a href="http://tools.geofabrik.de/mc/#15/-1.3135/36.7922&num=4&mt0=mapnik&mt1=google-map&mt2=bing-map&mt3=mapnik-german">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/groundtruth.png);">
+            <a class="source" href="http://groundtruth.in/">Groundtruth Initiative</a>
+        </div>
+
+        <div class="slide">
+            <h2>1. trace the roads using aerial imagery</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-id.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/kibera-outline.jpg);">
+            <a class="source" href="http://www.mapkibera.org/blog/2010/01/12/some-notes-on-map-kibera-mapping/">Map Kibera Blog</a>
+        </div>
+
+        <div class="slide">
+            <h2>2. use GPS to collect point data and correct roads</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kibera-gps.jpg);">
+            <a class="source" href="http://www.mapkibera.org/blog/2011/08/16/help-map-kibera-turn-maps-into-action/">Map Kibera Blog</a>
+        </div>
+
+        <div class="slide">
+            <p>"In the intense density of Kibera, selecting which features are 'important' is a judgment call and a matter of interest."</p>
+            <a class="source" href="http://www.mapkibera.org/blog/2010/01/12/some-notes-on-map-kibera-mapping/">Map Kibera Blog</a>
+        </div>
+
+        <div class="slide">
+            <h2>3. decide on and focus on themes</h2>
+            <p><a href="http://mapkibera.org/wiki/index.php?title=Tagging/Education">education</a></p>
+            <p><a href="http://mapkibera.org/wiki/index.php?title=Tagging/Health">health</a></p>
+            <p><a href="http://mapkibera.org/wiki/index.php?title=Tagging/Security">security</a></p>
+            <p><a href="http://mapkibera.org/wiki/index.php?title=Tagging/Watsan">water and sanitation</a></p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kibera-walking-papers.jpg);">
+            <a class="source" href="https://www.flickr.com/photos/junipermarie/4133315811/">Map Kibera Walking Papers</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/fieldpapers-print-atlas.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/fieldpapers-page.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/fieldpapers-uploaded.png);">
+        </div>
+
+        <div class="slide">
+            <h2>(week one)</h2>
+            <h2>~1997 - today</h2>
+            <ol style="list-style: decimal outside; padding-left: 50px;">
+                <li>GPS</li>
+                <li>the web changed</li>
+                <li>more data became available</li>
+                <li>FOSS became mainstream</li>
+            <ol>
+        </div>
+
+        <div class="slide" style="background-image: url(img/seeing-like-a-slum-1.png);">
+            <a class="source" href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2045556">Seeing Like a Slum: Towards Open, Deliberative Development</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mikel-stop-google.png);">
+            <a class="source" href="http://brainoff.com/weblog/2011/04/11/1635">We Need to Stop Google’s Exploitation of Open Communities</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/seeing-like-a-slum-2.png);">
+            <a class="source" href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2045556">Seeing Like a Slum: Towards Open, Deliberative Development</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/map-kibera-wall.jpg);">
+            <a class="source" href="http://www.mapkibera.org/blog/2013/04/10/security-map-draws-attention-in-kibera/">Map Kibera Blog</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/voice-of-kibera.png);">
+            <a class="source" href="http://voiceofkibera.org/">Voice of Kibera</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/voice-of-kibera-detail.png);">
+            <a class="source" href="http://voiceofkibera.org/reports/view/1315">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-schools-kenya.png);">
+            <a class="source" href="http://kiberanewsnetwork.org/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-schools-kenya-detail.png);">
+            <a class="source" href="http://kiberanewsnetwork.org/">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>HTML</h2>
+            <p>defines the <strong>structure</strong> of a page, loads other bits</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/html.png);">
+            <h2>HTML</h2>
+        </div>
+
+        <div class="slide">
+            <h2>CSS</h2>
+            <p>adds <strong>style</strong> to parts of a page</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/css.png);">
+            <h2>CSS</h2>
+        </div>
+
+        <div class="slide">
+            <h2>JavaScript</h2>
+            <p>makes web pages <strong>dynamic</strong> (eg AJAX)</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/ajax_grounded.gif);">
+            <h2>JavaScript</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/ajax_foursquare.gif);">
+            <h2>JavaScript</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/js.png);">
+            <h2>JavaScript</h2>
+        </div>
+
+        <div class="slide">
+            <p>your browser loads the <strong>HTML</strong>, which tells it which <strong>CSS</strong> and <strong>JavaScript</strong> files to get (if any)</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/devtools_loading.gif);">
+        </div>
+
+        <div class="slide">
+            <h2>if you want something to be online, it has to be on a server somewhere</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/imgur.png);">
+            <h2>imgur.com</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/neocities.png);">
+            <h2>neocities.org</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-pages.png);">
+            <h2 style="margin-top: 350px;">pages.github.com</h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>adding images to pop-ups</h2>
+        </div>
+
+    </body>
+</html>
