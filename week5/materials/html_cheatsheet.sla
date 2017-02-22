@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCRIBUSUTF8NEW Version="1.4.3">
+    <DOCUMENT ANZPAGES="2" PAGEWIDTH="595.28" PAGEHEIGHT="841.89" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" PRESET="0" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" ORIENTATION="0" PAGESIZE="A4" FIRSTNUM="1" BOOK="0" AUTOSPALTEN="1" ABSTSPALTEN="11" UNITS="0" DFONT="Arial Regular" DSIZE="12" DCOL="1" DGAP="0" TabFill="" TabWidth="36" AUTHOR="" COMMENTS="" KEYWORDS="" PUBLISHER="" DOCDATE="" DOCTYPE="" DOCFORMAT="" DOCIDENT="" DOCSOURCE="" DOCLANGINFO="" DOCRELATION="" DOCCOVER="" DOCRIGHTS="" DOCCONTRIB="" TITLE="" SUBJECT="" VHOCH="33" VHOCHSC="66" VTIEF="33" VTIEFSC="66" VKAPIT="75" BASEGRID="14.4" BASEO="0" AUTOL="20" UnderlinePos="-1" UnderlineWidth="-1" StrikeThruPos="-1" StrikeThruWidth="-1" GROUPC="1" HCMS="0" DPSo="0" DPSFo="0" DPuse="0" DPgam="0" DPbla="1" DPMo="sRGB IEC61966-2.1" DPPr="Fogra27L CMYK Coated Press" DPIn="sRGB IEC61966-2.1" DPInCMYK="Fogra27L CMYK Coated Press" DPIn2="sRGB IEC61966-2.1" DPIn3="Fogra27L CMYK Coated Press" DISc="1" DIIm="0" ALAYER="0" LANGUAGE="English" MINWORDLEN="3" HYCOUNT="2" AUTOMATIC="1" AUTOCHECK="0" GUIDELOCK="0" SnapToGuides="0" SnapToGrid="0" MINGRID="20" MAJGRID="100" SHOWGRID="1" SHOWGUIDES="1" showcolborders="1" SHOWFRAME="1" SHOWLAYERM="0" SHOWMARGIN="1" SHOWBASE="0" SHOWPICT="1" SHOWControl="0" SHOWLINK="1" rulerMode="1" showrulers="1" showBleed="1" rulerXoffset="0" rulerYoffset="0" GuideRad="10" GRAB="4" POLYC="4" POLYF="0.5" POLYR="0" POLYCUR="0" POLYFD="0" POLYS="0" AutoSave="1" AutoSaveTime="600000" ScratchBottom="20" ScratchLeft="100" ScratchRight="100" ScratchTop="20" GapHorizontal="0" GapVertical="40" StartArrow="0" EndArrow="0" PEN="Black" BRUSH="None" PENLINE="Black" PENTEXT="Black" StrokeText="Black" TextBackGround="None" TextLineColor="None" TextBackGroundShade="100" TextLineShade="100" TextPenShade="100" TextStrokeShade="100" STIL="1" STILLINE="1" WIDTH="1" WIDTHLINE="1" PENSHADE="100" LINESHADE="100" BRUSHSHADE="100" MAGMIN="10" MAGMAX="3200" MAGSTEP="200" CPICT="None" PICTSHADE="100" PICTSCX="1" PICTSCY="1" PSCALE="1" PASPECT="1" EmbeddedPath="0" HalfRes="1" dispX="10" dispY="10" constrain="15" MINORC="#00ff00" MAJORC="#00ff00" GuideC="#000080" BaseC="#c0c0c0" GuideZ="10" BACKG="1" PAGEC="#ffffff" MARGC="#0000ff" RANDF="0" currentProfile="PostScript">
+        <CheckProfile Name="PDF 1.3" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="1" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
+        <CheckProfile Name="PDF 1.4" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
+        <CheckProfile Name="PDF 1.5" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
+        <CheckProfile Name="PDF/X-3" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="1" minResolution="144" maxResolution="2400" checkAnnotations="1" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
+        <CheckProfile Name="PostScript" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="1" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
+        <COLOR NAME="Black" CMYK="#000000ff" Spot="0" Register="0"/>
+        <COLOR NAME="Blue" RGB="#0000ff" Spot="0" Register="0"/>
+        <COLOR NAME="Cool Black" CMYK="#990000ff" Spot="0" Register="0"/>
+        <COLOR NAME="Cyan" CMYK="#ff000000" Spot="0" Register="0"/>
+        <COLOR NAME="Green" RGB="#00ff00" Spot="0" Register="0"/>
+        <COLOR NAME="Magenta" CMYK="#00ff0000" Spot="0" Register="0"/>
+        <COLOR NAME="Red" RGB="#ff0000" Spot="0" Register="0"/>
+        <COLOR NAME="Registration" CMYK="#ffffffff" Spot="0" Register="1"/>
+        <COLOR NAME="Rich Black" CMYK="#996666ff" Spot="0" Register="0"/>
+        <COLOR NAME="Warm Black" CMYK="#00994cff" Spot="0" Register="0"/>
+        <COLOR NAME="White" CMYK="#00000000" Spot="0" Register="0"/>
+        <COLOR NAME="Yellow" CMYK="#0000ff00" Spot="0" Register="0"/>
+        <HYPHEN/>
+        <STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" DROP="0" DROPLIN="2" DROPDIST="0"/>
+        <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Arial Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
+        <LAYERS NUMMER="0" LEVEL="0" NAME="Background" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#000000"/>
+        <Printer firstUse="1" toFile="0" useAltPrintCommand="0" outputSeparations="0" useSpotColors="1" useColor="1" mirrorH="0" mirrorV="0" useICC="0" doGCR="0" doClip="0" setDevParam="0" useDocBleeds="1" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" includePDFMarks="1" PSLevel="3" PDLanguage="3" markOffset="0" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" printer="Canon_MP450_1" filename="" separationName="All" printerCommand="">
+            <Separation Name="Cyan"/>
+            <Separation Name="Magenta"/>
+            <Separation Name="Yellow"/>
+            <Separation Name="Black"/>
+        </Printer>
+        <PDF firstUse="0" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="0" Quality="0" MirrorH="0" MirrorV="0" Clip="0" RotateDeg="0" PresentMode="0" RecalcPic="0" Grayscale="0" RGBMode="1" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="300" Resolution="300" Version="14" Intent="1" Intent2="0" SolidP="sRGB IEC61966-2.1" ImageP="sRGB IEC61966-2.1" PrintP="Fogra27L CMYK Coated Press" InfoString="" BTop="0" BLeft="0" BRight="0" BBottom="0" useDocBleeds="1" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" PageLayout="0" openAction="">
+            <Fonts Name="Arial Rounded MT Bold Regular"/>
+            <Subset Name="Arial Regular"/>
+            <Subset Name="Courier New Regular"/>
+            <Effekte pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
+            <Effekte pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
+            <LPI Color="" Frequency="133" Angle="45" SpotFunction="3"/>
+            <LPI Color="Black" Frequency="133" Angle="45" SpotFunction="3"/>
+            <LPI Color="Cyan" Frequency="133" Angle="105" SpotFunction="3"/>
+            <LPI Color="Magenta" Frequency="133" Angle="75" SpotFunction="3"/>
+            <LPI Color="Yellow" Frequency="133" Angle="90" SpotFunction="3"/>
+        </PDF>
+        <DocItemAttributes/>
+        <TablesOfContents/>
+        <PageSets>
+            <Set Name="Single Page" FirstPage="0" Rows="1" Columns="1"/>
+            <Set Name="Double Sided" FirstPage="1" Rows="1" Columns="2">
+                <PageNames Name="Left Page"/>
+                <PageNames Name="Right Page"/>
+            </Set>
+            <Set Name="3-Fold" FirstPage="0" Rows="1" Columns="3">
+                <PageNames Name="Left Page"/>
+                <PageNames Name="Middle"/>
+                <PageNames Name="Right Page"/>
+            </Set>
+            <Set Name="4-Fold" FirstPage="0" Rows="1" Columns="4">
+                <PageNames Name="Left Page"/>
+                <PageNames Name="Middle Left"/>
+                <PageNames Name="Middle Right"/>
+                <PageNames Name="Right Page"/>
+            </Set>
+        </PageSets>
+        <Sections>
+            <Section Number="0" Name="0" From="0" To="1" Type="Type_1_2_3" Start="1" Reversed="0" Active="1"/>
+        </Sections>
+        <MASTERPAGE PAGEXPOS="100" PAGEYPOS="20" PAGEWIDTH="595.28" PAGEHEIGHT="841.89" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" NUM="0" NAM="Normal" MNAM="" Size="A4" Orientation="0" LEFT="0" PRESET="0" VerticalGuides="" HorizontalGuides="" AGhorizontalAutoGap="0" AGverticalAutoGap="0" AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGverticalAutoRefer="0" AGSelection="0 0 0 0"/>
+        <PAGE PAGEXPOS="100" PAGEYPOS="20" PAGEWIDTH="595.28" PAGEHEIGHT="841.89" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" NUM="0" NAM="" MNAM="Normal" Size="A4" Orientation="0" LEFT="0" PRESET="0" VerticalGuides="" HorizontalGuides="" AGhorizontalAutoGap="0" AGverticalAutoGap="0" AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGverticalAutoRefer="0" AGSelection="0 0 0 0"/>
+        <PAGE PAGEXPOS="100" PAGEYPOS="901.89" PAGEWIDTH="595.28" PAGEHEIGHT="841.89" BORDERLEFT="40" BORDERRIGHT="40" BORDERTOP="40" BORDERBOTTOM="40" NUM="1" NAM="" MNAM="Normal" Size="A4" Orientation="0" LEFT="0" PRESET="0" VerticalGuides="" HorizontalGuides="" AGhorizontalAutoGap="0" AGverticalAutoGap="0" AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGverticalAutoRefer="0" AGSelection="0 0 0 0"/>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="140" YPOS="110" WIDTH="515.5" HEIGHT="239" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 515.5 0 515.5 0 515.5 0 515.5 0 515.5 239 515.5 239 515.5 239 515.5 239 0 239 0 239 0 239 0 239 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 515.5 0 515.5 0 515.5 0 515.5 0 515.5 239 515.5 239 515.5 239 515.5 239 0 239 0 239 0 239 0 239 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT FONT="Arial Rounded MT Bold Regular" CH="Tags"/>
+            <para/>
+            <para/>
+            <ITEXT CH="HTML (Hyper Text Markup Language) documents are text documents that are structured using "/>
+            <ITEXT FONT="Arial Rounded MT Bold Regular" CH="tags"/>
+            <ITEXT FONT="Arial Regular" CH=". "/>
+            <ITEXT FONT="Arial Rounded MT Bold Regular" CH="Opening tags"/>
+            <ITEXT FONT="Arial Regular" CH=" are a word surrounded by "/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;"/>
+            <ITEXT FONT="Arial Regular" CH=" and "/>
+            <ITEXT FONT="Courier New Regular" CH="&gt;"/>
+            <ITEXT FONT="Arial Regular" CH=". "/>
+            <ITEXT FONT="Arial Rounded MT Bold Regular" CH="Closing tags"/>
+            <ITEXT FONT="Arial Regular" CH=" are the same word surrounded by "/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;/"/>
+            <ITEXT FONT="Arial Regular" CH=" and "/>
+            <ITEXT FONT="Courier New Regular" CH="&gt;"/>
+            <ITEXT FONT="Arial Regular" CH="."/>
+            <para/>
+            <para/>
+            <ITEXT CH="For example: "/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;p&gt;"/>
+            <ITEXT CH=" is the opening paragraph tag. "/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;/p&gt;"/>
+            <ITEXT CH=" is the closing paragraph tag. "/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;p&gt;How do you like my paragraph?&lt;/p&gt;"/>
+            <ITEXT CH=" is a paragraph "/>
+            <ITEXT FONT="Arial Rounded MT Bold Regular" CH="element"/>
+            <ITEXT CH=" consisting of the opening paragraph tag, some content, and the closing paragraph tag."/>
+            <para/>
+            <para/>
+            <ITEXT CH="An opening tag can contain any number of "/>
+            <ITEXT FONT="Arial Rounded MT Bold Regular" CH="attributes"/>
+            <ITEXT CH=" before the "/>
+            <ITEXT FONT="Courier New Regular" CH="&gt;"/>
+            <ITEXT CH=". An attribute has a name and a value and is written "/>
+            <ITEXT FONT="Courier New Regular" CH="name=&quot;value&quot;"/>
+            <ITEXT CH=". For example, in "/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;p class=&quot;leading-paragraph&quot;&gt;This is the leading paragraph.&lt;/p&gt;"/>
+            <ITEXT CH=", the paragraph's class is "/>
+            <ITEXT FONT="Courier New Regular" CH="leading-paragraph"/>
+            <ITEXT CH="."/>
+            <para/>
+            <para/>
+            <ITEXT CH="There are two main attributes you can add to any tag that we will be using:"/>
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="331.9" YPOS="63.5" WIDTH="135" HEIGHT="17.5" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 135 0 135 0 135 0 135 0 135 17.5 135 17.5 135 17.5 135 17.5 0 17.5 0 17.5 0 17.5 0 17.5 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 135 0 135 0 135 0 135 0 135 17.5 135 17.5 135 17.5 135 17.5 0 17.5 0 17.5 0 17.5 0 17.5 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT FONTSIZE="16" CH="HTML Cheatsheet"/>
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="141.5" YPOS="791.5" WIDTH="513" HEIGHT="30" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 513 0 513 0 513 0 513 0 513 30 513 30 513 30 513 30 0 30 0 30 0 30 0 30 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 513 0 513 0 513 0 513 0 513 30 513 30 513 30 513 30 0 30 0 30 0 30 0 30 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT FEATURES="inherit superscript" CH="1"/>
+            <ITEXT CH=" http://www.w3.org/"/>
+            <para/>
+            <ITEXT FEATURES="inherit superscript" CH="2"/>
+            <ITEXT CH=" https://developer.mozilla.org/en-US/docs/Web/HTML/Element"/>
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="160" YPOS="539.6" WIDTH="494" HEIGHT="248.4" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 494 0 494 0 494 0 494 0 494 248.4 494 248.4 494 248.4 494 248.4 0 248.4 0 248.4 0 248.4 0 248.4 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 494 0 494 0 494 0 494 0 494 248.4 494 248.4 494 248.4 494 248.4 0 248.4 0 248.4 0 248.4 0 248.4 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT FONT="Courier New Regular" CH="p"/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="paragraph: Usually displayed as a block of text with some padding above and "/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="below it."/>
+            <para/>
+            <ITEXT FONT="Courier New Regular" CH="br"/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="line break: End the current line. Avoid using it, but sometimes it's useful. Does "/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="not have a closing tag, so it's written "/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;br /&gt;"/>
+            <ITEXT CH="."/>
+            <para/>
+            <ITEXT FONT="Courier New Regular" CH="a"/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="link: Make a link to a page with the text inside the tags. Use the "/>
+            <ITEXT FONT="Courier New Regular" CH="href"/>
+            <ITEXT CH=" attribute "/>
+            <para/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="for the url to link to. For example,"/>
+            <para/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;a href=&quot;http://example.com&quot;&gt;Link example&lt;/a&gt;"/>
+            <para/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="will display &quot;Link example&quot;, which will send the browser to example.com when "/>
+            <para/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="it's clicked. Other content such as "/>
+            <ITEXT FONT="Courier New Regular" CH="img"/>
+            <ITEXT CH=" elements can go inside an "/>
+            <ITEXT FONT="Courier New Regular" CH="a"/>
+            <ITEXT CH=" element."/>
+            <para/>
+            <ITEXT FONT="Courier New Regular" CH="img"/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="image: Display an image. Use the "/>
+            <ITEXT FONT="Courier New Regular" CH="src"/>
+            <ITEXT CH=" attribute to specify the url of the image."/>
+            <para/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="Does not have a closing tag. For example,"/>
+            <para/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;img src=&quot;http://596acres.org/media/img/logo.png&quot; /&gt;"/>
+            <para/>
+            <ITEXT FONT="Courier New Regular" CH="em"/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="emphasize: Emphasize text, usually by italicizing it."/>
+            <para/>
+            <ITEXT FONT="Courier New Regular" CH="strong"/>
+            <tab/>
+            <ITEXT CH="strong: Makes text strong, usually by making it bold."/>
+            <para/>
+            <ITEXT FONT="Courier New Regular" CH="ol"/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="ordered list: Makes a numbered list. See "/>
+            <ITEXT FONT="Courier New Regular" CH="li"/>
+            <ITEXT CH=" to add items to this list."/>
+            <para/>
+            <ITEXT FONT="Courier New Regular" CH="ul"/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="unordered list: Makes a bulleted list. See "/>
+            <ITEXT FONT="Courier New Regular" CH="li"/>
+            <ITEXT CH=" to add items to this list."/>
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="139.5" YPOS="457.5" WIDTH="516.5" HEIGHT="75.5" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 516.5 0 516.5 0 516.5 0 516.5 0 516.5 75.5 516.5 75.5 516.5 75.5 516.5 75.5 0 75.5 0 75.5 0 75.5 0 75.5 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 516.5 0 516.5 0 516.5 0 516.5 0 516.5 75.5 516.5 75.5 516.5 75.5 516.5 75.5 0 75.5 0 75.5 0 75.5 0 75.5 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT FONT="Arial Rounded MT Bold Regular" FONTSIZE="14" CH="Common tags"/>
+            <para/>
+            <para/>
+            <ITEXT CH="The tags you can use in an HTML file are defined by a body called the W3C"/>
+            <ITEXT FEATURES="inherit superscript" CH="1"/>
+            <ITEXT CH=". Mozilla maintains an exhaustive list"/>
+            <ITEXT FEATURES="inherit superscript" CH="2"/>
+            <ITEXT CH=" that describes each. For most of the work in this class we'll need just a few of these tags. Let's go over those now."/>
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="161" YPOS="352.5" WIDTH="494.5" HEIGHT="78" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 494.5 0 494.5 0 494.5 0 494.5 0 494.5 78 494.5 78 494.5 78 494.5 78 0 78 0 78 0 78 0 78 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 494.5 0 494.5 0 494.5 0 494.5 0 494.5 78 494.5 78 494.5 78 494.5 78 0 78 0 78 0 78 0 78 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT FONT="Courier New Regular" CH="id"/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="A unique identifier for the element. Used for styling and scripts."/>
+            <para/>
+            <ITEXT FONT="Courier New Regular" CH="class"/>
+            <tab/>
+            <ITEXT CH="The name of the set of elements this element is part of, used for styling and"/>
+            <para/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="scripts as "/>
+            <ITEXT FONT="Courier New Regular" CH="id"/>
+            <ITEXT CH=" is. Often there will be multiple elements with the same class. An "/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="element can be part of multiple classes, separated by spaces. For example,"/>
+            <para/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;p class=&quot;class-one class-two&quot;&gt;two-class p&lt;/p&gt;"/>
+            <ITEXT CH="."/>
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="1" PTYPE="4" XPOS="160.5" YPOS="944" WIDTH="493.5" HEIGHT="252" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 493.5 0 493.5 0 493.5 0 493.5 0 493.5 252 493.5 252 493.5 252 493.5 252 0 252 0 252 0 252 0 252 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 493.5 0 493.5 0 493.5 0 493.5 0 493.5 252 493.5 252 493.5 252 493.5 252 0 252 0 252 0 252 0 252 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT FONT="Courier New Regular" CH="li"/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT CH="list item: An item in an "/>
+            <ITEXT FONT="Courier New Regular" CH="ol"/>
+            <ITEXT CH=" or "/>
+            <ITEXT FONT="Courier New Regular" CH="ul"/>
+            <ITEXT CH=". For example,"/>
+            <para/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;ul&gt;"/>
+            <para/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;li&gt;bulleted item one&lt;/li&gt;"/>
+            <para/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;li&gt;bulleted item two&lt;/li&gt;"/>
+            <para/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;/ul&gt;"/>
+            <para/>
+            <ITEXT FONT="Courier New Regular" CH="div"/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <ITEXT FONT="Arial Regular" CH="divider: A generic box for content, including other tags. Acts as a block, so it"/>
+            <para/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <ITEXT FONT="Arial Regular" CH="usually takes up the entire width of the page or its parent."/>
+            <para/>
+            <ITEXT FONT="Courier New Regular" CH="span"/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <ITEXT FONT="Arial Regular" CH="span: A generic box for content that is not a block, so it won't take up the "/>
+            <para/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <ITEXT FONT="Arial Regular" CH="entire width of a page or parent."/>
+            <para/>
+            <ITEXT FONT="Courier New Regular" CH="input"/>
+            <tab FONT="Arial Regular"/>
+            <ITEXT FONT="Arial Regular" CH="input: A form input. Has a number of attributes that affect its display and "/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <ITEXT FONT="Arial Regular" CH="function:"/>
+            <para/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="type"/>
+            <ITEXT FONT="Arial Regular" CH=":"/>
+            <ITEXT CH=" "/>
+            <tab/>
+            <tab/>
+            <ITEXT CH="Takes a number of values"/>
+            <ITEXT FEATURES="inherit superscript" CH="3"/>
+            <ITEXT CH=", most commonly "/>
+            <ITEXT FONT="Courier New Regular" CH="checkbox"/>
+            <ITEXT CH=", "/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <tab/>
+            <ITEXT FONT="Courier New Regular" CH="radio"/>
+            <ITEXT CH=", and "/>
+            <ITEXT FONT="Courier New Regular" CH="text"/>
+            <ITEXT CH=", creating the respective form input."/>
+            <para/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="value"/>
+            <ITEXT FONT="Arial Regular" CH=":"/>
+            <tab FONT="Arial Regular"/>
+            <ITEXT FONT="Arial Regular" CH="The value entered in the input, mostly useful for text "/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <tab FONT="Arial Regular"/>
+            <ITEXT FONT="Arial Regular" CH="inputs."/>
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="1" PTYPE="4" XPOS="139.5" YPOS="1688.5" WIDTH="515.5" HEIGHT="13.5" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 515.5 0 515.5 0 515.5 0 515.5 0 515.5 13.5 515.5 13.5 515.5 13.5 515.5 13.5 0 13.5 0 13.5 0 13.5 0 13.5 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 515.5 0 515.5 0 515.5 0 515.5 0 515.5 13.5 515.5 13.5 515.5 13.5 515.5 13.5 0 13.5 0 13.5 0 13.5 0 13.5 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT FONT="Arial Regular" FEATURES="inherit superscript" CH="3"/>
+            <ITEXT FONT="Arial Regular" CH=" Full documentation here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"/>
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="1" PTYPE="4" XPOS="140" YPOS="1202.5" WIDTH="515" HEIGHT="232.5" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 515 0 515 0 515 0 515 0 515 232.5 515 232.5 515 232.5 515 232.5 0 232.5 0 232.5 0 232.5 0 232.5 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 515 0 515 0 515 0 515 0 515 232.5 515 232.5 515 232.5 515 232.5 0 232.5 0 232.5 0 232.5 0 232.5 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT FONT="Arial Rounded MT Bold Regular" CH="HTML file template"/>
+            <para/>
+            <para/>
+            <ITEXT CH="Every HTML file that you write will have some elements in common. At the very least they will"/>
+            <para/>
+            <ITEXT CH="contain:"/>
+            <para/>
+            <para/>
+            <tab/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;!DOCTYPE html&gt;"/>
+            <para/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;html&gt;"/>
+            <para/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;head&gt;"/>
+            <para/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;/head&gt;"/>
+            <para/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;body&gt;"/>
+            <para/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;/body&gt;"/>
+            <para/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="&lt;/html&gt;"/>
+            <para/>
+            <para/>
+            <ITEXT CH="The content of your page (the part you want to display) goes within the "/>
+            <ITEXT FONT="Courier New Regular" CH="body"/>
+            <ITEXT CH=" tags. This can contain any of the tags listed above, and more. The "/>
+            <ITEXT FONT="Courier New Regular" CH="head"/>
+            <ITEXT CH=" tag is where scripts and styles go."/>
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="1" PTYPE="4" XPOS="140" YPOS="1447" WIDTH="515" HEIGHT="237.5" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 515 0 515 0 515 0 515 0 515 237.5 515 237.5 515 237.5 515 237.5 0 237.5 0 237.5 0 237.5 0 237.5 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 515 0 515 0 515 0 515 0 515 237.5 515 237.5 515 237.5 515 237.5 0 237.5 0 237.5 0 237.5 0 237.5 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT FONT="Arial Rounded MT Bold Regular" FONTSIZE="14" CH="HTML Resources"/>
+            <para/>
+            <para/>
+            <ITEXT CH="There are numerous resources online for learning about HTML. Here are a few good ones:"/>
+            <para/>
+            <para/>
+            <ITEXT CH="Codecademy, Web Fundamentals, includes guided interactive editing sessions at a nice pace:"/>
+            <para/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="http://www.codecademy.com/tracks/web"/>
+            <para/>
+            <para/>
+            <ITEXT CH="A Beginner's guide to HTML &amp; CSS is good but less interactive than the Codecademy guide:"/>
+            <para/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="http://learn.shayhowe.com/html-css/"/>
+            <para/>
+            <para/>
+            <ITEXT CH="CSS-Tricks has a quick video introduction to both HTML and CSS that is worth watching:"/>
+            <para/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="http://css-tricks.com/video-screencasts/58-html-css-the-very-"/>
+            <tab FONT="Courier New Regular"/>
+            <tab FONT="Courier New Regular"/>
+            <ITEXT FONT="Courier New Regular" CH="basics/"/>
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+    </DOCUMENT>
+</SCRIBUSUTF8NEW>
