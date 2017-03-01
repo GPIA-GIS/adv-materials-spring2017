@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>In-class Excercise | Advanced GIS</title>
+        <link href="../style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">Advanced GIS</a>
+                <h1>In-class Excercise: CSS</h1>
+            </header>
+
+            <section>
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="http://htmldog.com/reference/cssproperties/">This HTML Dog page</a> lists the more common CSS properties you'll be using.</li>
+                    <li>This <a href="http://www.lesliefranke.com/files/reference/csscheatsheet.html">CSS cheat sheet</a> is a bit more terse but you might find it useful.</li>
+                    <li>There are more exhaustive references on <a href="https://css-tricks.com/almanac/">CSS-Tricks</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Mozilla Developer Network</a>.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Part 1: Use developer tools to change other webpages' CSS</h2>
+                <ol>
+                    <li>Load a webpage in your browser.</li>
+                    <li>Open developer tools:</li>
+                    <li>
+                        <div>Using the Select Element tool, select an element:</div>
+                        <img src="img/devtools-select-element.png" />
+                    </li>
+                    <li>
+                        <p>On the left you should see the HTML for the element, and on the right you should see the CSS for it. The CSS might be more complicated depending on the page you're looking at.</p>
+                        <img src="img/devtools-panels.png" />
+                    </li>
+                    <li>
+                        <p>Style the element by clicking to the right of <code>element.style</code> in the CSS area. Start typing a property, use the arrow keys to select it, then press tab and type a value. This has an identical effect to adding CSS to a <code>style</code> attribute in an element.</p>
+                        <img src="img/devtools-style.gif" />
+                    </li>
+                    <li>Use the Select Element tool to find another element you would like to style. This time, instead of styling by adding properties to <code>element.style</code> add and change properties within one of the existing CSS statements that work on the element. When you do, multiple elements on the page should change.</li>
+                    <li>Continue defacing the page and get a feeling for how the CSS on the page works. In particular, look at turning properties off (using the checkboxes to the left of them) and changing colors using the built-in color picker.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Add CSS to a webpage</h2>
+                <ol>
+                    <li>Download <a href="inclass-style.html">this HTML page</a> and open it in your code editor and your browser.</li>
+                    <li>Let's add some style. In the <code>&lt;style&gt;</code> element, add a line after <pre><code>/* Your styles go here */</code></pre>
+                        and paste the following:
+                        <pre><code>p {
+    margin-top: 100px;
+}</code></pre>
+                        Refresh the page in your browser. There should now be much more room between paragraphs. We selected the paragraph elements (<code>p</code>) and set the <code>margin-top</code> property to <code>100px</code>.
+
+                    </li>
+                    <li>Style all the links (<code>a</code> elements) by adding a CSS statement after the statement we just added and setting properties as you like. I recommend <code><a href="https://css-tricks.com/almanac/properties/t/color/">color</a></code>, <code><a href="https://css-tricks.com/almanac/properties/b/background-color/">background-color</a></code>, and <code><a href="https://css-tricks.com/almanac/properties/t/text-decoration/">text-decoration</a></code> for starters.</li>
+                    <li>Change the font family for the entire page by modifying the <code>font-family</code> for the <code>body</code>. Read more about this and see an example at <a href="https://css-tricks.com/almanac/properties/f/font-family/">CSS-Tricks</a>.</li>
+                    <li>
+                        CSS can do much more than select all elements of a type and style those. For example, notice that there are a few <code>span</code> elements in the HTML we're working with. They have been invisible so far because <code>span</code> elements have no style by default. Let's style some of them now by adding a new statement:
+                        <pre><code>.sign-label {
+    color: red;
+}</code></pre>
+                        <p>
+                        Why did we use <code>.sign-label</code> for the selector instead of <code>span</code>? Because you generally don't want to style all <code>span</code> elements on a page, and in this case we only wanted to style the ones that are of class <code>sign-label</code>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>There are two links (<code>a</code> elements) on this page. Let's style the one that links to Carto differently.</p>
+                        <p>Find the link to Carto:</p>
+                        <pre><code>&lt;a href="https://eric.carto.com..."&gt;Carto&lt;/a&gt;</code></pre>
+                        <p>and add a <code>style</code> attribute to it:</p>
+                        <pre><code>&lt;a href="https://eric.carto.com..." <strong>style=""</strong>&gt;Carto&lt;/a&gt;</code></pre>
+                        <p>then add some CSS to the style:</p>
+                        <pre><code>&lt;a href="https://eric.carto.com..." style="<strong>font-weight: bold;</strong>"&gt;Carto&lt;/a&gt;</code></pre>
+                        <p>You can add as many CSS properties as you like to a <code>style</code> attribute on an element, just remember to separate them with semicolons (<code>;</code>). Add another CSS property to the link's <code>style</code> attribute now.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Add CSS to a Carto map</h2>
+                <ol>
+                    <li>Open a Carto map in your Carto account.</li>
+                    <li>Open the legend for the map, creating a new legend if there isn't one yet.</li>
+                    <li>Edit the code for the legend by flipping the <strong>HTML</strong> switch.</li>
+                    <li>
+                        You can style legends and pop-ups by adding a <code>style</code> attribute to the element you want to style (<strong>inline</strong>). If the original legend was:
+                        <pre><code>&lt;div class='cartodb-legend custom'&gt;
+    &lt;li&gt;
+        &lt;div class="bullet" style="background:#fb9a99"&gt;&lt;/div&gt;
+        graffiti report
+    &lt;/li&gt;
+&lt;/div&gt;</code></pre>
+                        <p>then you can change the bullet's style by editing the <code>style</code> attribute:</p>
+                        <pre><code>&lt;div class='cartodb-legend custom'&gt;
+    &lt;li&gt;
+        &lt;div class="bullet" style="background: blue; width: 20px;"&gt;&lt;/div&gt;
+        graffiti report
+    &lt;/li&gt;
+&lt;/div&gt;</code></pre>
+                    </li>
+                    <li>Unfortunately, you cannot add a <code>style</code> element to legends and pop-ups in Carto. This means you cannot use selectors to style multiple elements at once. If you want full control over the style of legends and pop-ups, you'll have to use JavaScript as we will next week.</li>
+                    <li>Experiment a bit more with styling both legends and pop-ups in Carto. You can use developer tools while you do this if you find it useful.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>

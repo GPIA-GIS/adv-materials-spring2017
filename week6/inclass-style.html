@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            .map {
+                height: 100%;
+                width: 100%;
+            }
+
+            /*
+             * Put our overlay on top of the map
+             */
+            .overlay {
+                background: white;
+                cursor: pointer;
+                font-size: 24px;
+                width: 250px;
+                padding: 10px;
+                position: absolute;
+                right: 25px;
+                top: 25px;
+                z-index: 5000;
+            }
+
+            /* Your styles go here */
+        </style>
+    </head>
+    <body>
+        <iframe class="map" frameborder="0" src="https://eric.carto.com/builder/a66924c6-4625-11e3-b92a-5404a6a69006/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+        <div class="overlay">
+            <h1>Graffiti and signs</h1>
+            <p>This is a map comparing <span class="sign-label">outdoor sign permits (red)</span> and <span class="graffiti-label">reported graffiti (blue)</span>.</p>
+            <p>Both datasets are from the <a href="https://data.cityofnewyork.us/">NYC Open Data portal</a>.</p>
+            <p>View the original map on <a href="https://eric.carto.com/builder/a66924c6-4625-11e3-b92a-5404a6a69006/embed">Carto</a>.</p>
+        </div>
+    </body>
+</html>
