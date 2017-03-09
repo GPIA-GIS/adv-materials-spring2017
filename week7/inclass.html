@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>In-class Exercise | Advanced GIS</title>
+        <link href="../style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">Advanced GIS</a>
+                <h1>In-class Exercise: JavaScript</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Embed a map with JavaScript</h2>
+                <ol>
+                    <li>Download <a href="inclass-embed.html">this HTML</a> and open it in a code editor (such as Brackets).</li>
+                    <li>Open the file in your browser.</li>
+                    <li>Open a published Carto map you will embed on the page. Find the <strong>mapid</strong> by looking at the url when you have the map open. It should look something like
+                        <pre><code>https://thenewschool.carto.com/u/brelsfoeagain/builder/79edb122-0374-11e7-b189-0e233c30368f/</code></pre>
+                        and the mapid is the numbers and letters after <code>/builder/</code>, in this case:
+                        <pre><code>https://thenewschool.carto.com/u/brelsfoeagain/builder/<strong>79edb122-0374-11e7-b189-0e233c30368f</strong>/</code></pre>
+                    </li>
+                    <li>
+                        Replace the url for the map to one of your own maps. Currently this looks like
+                        <pre><code>cartodb.createVis('map', 'https://thenewschool.carto.com/u/brelsfoeagain/api/v2/viz/79edb122-0374-11e7-b189-0e233c30368f/viz.json');</code></pre>
+                        and you need to replace two parts of the url: the username and the mapid (which you found in step 3).
+                        <pre><code>cartodb.createVis('map', 'https://thenewschool.carto.com/u/<strong>{username}</strong>/api/v2/viz/<strong>{mapid}</strong>/viz.json');</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Change the options on a map</h2>
+                <p>Continuing with your page from Part 1, change the initial center and zoom on your map using options in <a href="https://carto.com/docs/carto-engine/carto-js/api-methods#arguments">the documentation</a>.</p>
+                <p>You currently have something like:
+                    <pre><code>&lt;script&gt;
+    $(document).ready(function () {
+        cartodb.createVis('map', your_visualization_url);
+    });
+&lt;/script&gt;</code></pre>
+                </p>
+                <p>Add options like this:
+                    <pre><code>&lt;script&gt;
+    $(document).ready(function () {
+        cartodb.createVis('map', your_visualization_url<strong>, {
+            center_lat: 50,
+            center_lon: -74,
+        }</strong>);
+    });
+&lt;/script&gt;</code></pre>
+                </p>
+                <p>(I'm only showing you how to do the center here, you should use <a href="https://carto.com/docs/carto-engine/carto-js/api-methods#arguments">the documentation</a> to figure out how to do the zoom.)</p>
+            </section>
+
+            <section>
+                <h2>Part 3: Filter a map layer with JavaScript</h2>
+                <ol>
+                    <li>Download <a href="inclass-button.html">this HTML</a> and open it in a code editor (such as Brackets).</li>
+                    <li>Open the file in your browser.</li>
+                    <li>Right now the "public water" and "reset" buttons change the SQL of the layer when you click on them. Take a look at the HTML and JavaScript that we use for the "public water" button:
+                        <pre><code>&lt;button class="public-water"&gt;public water&lt;/button&gt;</code></pre>
+                        and in the JavaScript:
+                        <pre><code>$('.public-water').click(function () {
+    watsanLayer.setSQL("SELECT * FROM watsan WHERE watsan = 'water_public'");
+});</code></pre>
+                    </li>
+                    <li>We want to add another button to filter the layer to just urban agriculture points. After the "public water" button add another button, this time for urban agriculture:
+                        <pre><code>&lt;button class="urban-agriculture"&gt;urban agriculture&lt;/button&gt;</code></pre>
+                    </li>
+                    <li>Reload the page. You should have a button that says "urban agriculture" but doesn't do anything when you click it. You need to add some JavaScript to make that part work. Add this in the JavaScript:
+                        <pre><code>$('.urban-agriculture').click(function () {
+    watsanLayer.setSQL("SELECT * FROM watsan WHERE watsan = 'urban_agriculture'");
+});</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>

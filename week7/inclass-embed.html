@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+        <!--
+            Load Carto's code so we can pull in our Carto maps.
+        -->
+        <link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+        <script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
+
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+
+            #map {
+                height: 100%;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+
+        <script>
+            $(document).ready(function () {
+                //
+                // Initialize map from Carto: create the map and store the data layer for later
+                //
+                // The format for this url is:
+                //  https://thenewschool.carto.com/u/{username}/api/v2/viz/{mapid}/viz.json
+                //
+                // and you can find the mapid by looking at the url of your map when editing it. For example,
+                // when I'm editing this map the url is:
+                //  https://thenewschool.carto.com/u/brelsfoeagain/builder/79edb122-0374-11e7-b189-0e233c30368f
+                //
+                // The mapid is everything after "/builder/" at the end.
+                //
+                cartodb.createVis('map', 'https://thenewschool.carto.com/u/brelsfoeagain/api/v2/viz/79edb122-0374-11e7-b189-0e233c30368f/viz.json');
+            });
+        </script>
+    </body>
+</html>
