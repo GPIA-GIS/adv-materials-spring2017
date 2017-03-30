@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 9 | Advanced GIS</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="http://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Advanced GIS, Lecture 9</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Advanced GIS</h1>
+            <p>Class 9</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-js-builder.png);">
+            <a class="source" href="https://gist.github.com/ebrelsford/3cfc899af2e4f36ed0ca62bada5f2226">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-custom-popups.png);">
+            <a class="source" href="https://bl.ocks.org/ebrelsford/71aa92b6f23ac4811874294bacf1b500">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-popups-embed.png);">
+            <a class="source" href="https://bl.ocks.org/ebrelsford/248e9995bd0e403f1c2604641b43b291">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>last time:</h2>
+        </div>
+
+        <div class="slide">
+            <h2>1. create a button</h2>
+            <pre><code>&lt;button class="public-water"&gt;
+    public water
+&lt;/button&gt;</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/public-water-button.png);">
+        </div>
+
+        <div class="slide">
+            <h2>2. get the map layer</h2>
+            <pre style="font-size: 50px; line-height: 60px;"><code>
+cartodb.createVis(...)
+.done(function (vis, layers) {
+    watsanLayer = layers[1].getSubLayer(0);     
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>3. listen for a click on the button</h2>
+            <pre style="font-size: 50px; line-height: 60px;"><code>$('.public-water').click(function () {
+    ...
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>4. change the layer's SQL</h2>
+            <pre style="font-size: 30px; line-height: 40px;"><code>$('.public-water').click(function () {
+    watsanLayer.setSQL("SELECT * FROM watsan WHERE watsan = 'water_public'");
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>you <em>could</em> make a button for each type of watsan feature</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>SELECT * 
+FROM watsan 
+WHERE watsan = 'urban_agriculture'
+
+SELECT * 
+FROM watsan 
+WHERE watsan = 'toilet_public'</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>but that's kinda what dropdowns are for</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/llnyc.png);">
+            <a href="http://livinglotsnyc.org/">livinglotsnyc.org</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-dropdown.png); background-size: 50%;">
+        </div>
+
+        <div class="slide">
+            <h2>1. create a dropdown</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 35px; line-height: 45px;"><code>&lt;select class="type-picker"&gt;
+    &lt;option value="all"&gt;All types&lt;/option&gt;
+    &lt;option value="bathroom"&gt;bathroom&lt;/option&gt;
+    &lt;option value="biocentre"&gt;biocentre&lt;/option&gt;
+    &lt;option value="dumping_site"&gt;dumping site&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>2. listen for a change to the dropdown</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/deliveries.jpg);">
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 55px; line-height: 65px;"><code>$('.type-picker').change(function () {
+    ...
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>with a dropdown, you want to vary the SQL by the option selected</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>SELECT * 
+FROM watsan 
+WHERE watsan = 'urban_agriculture'
+
+SELECT * 
+FROM watsan 
+WHERE watsan = 'toilet_public'</code></pre>
+        </div>
+
+        <div class="slide">
+            <code>$('.type-picker').val()</code>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 30px; line-height: 40px;"><code>var type = $('.type-picker').val();
+var sql = "SELECT * FROM watsan WHERE watsan = " + type;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 30px; line-height: 40px;"><code>var type = $('.type-picker').val();
+var sql = "SELECT * FROM watsan WHERE watsan = <span class="highlighted">'</span>" + type + "<span class="highlighted">'</span>";</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>let's look at this together</h2>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>arrays</h2>
+        </div>
+
+        <div class="slide">
+            <h2>arrays are lists of things</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>var types = [
+    'urban_agriculture',
+    'biocentre',
+    'toilet_public'
+];</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>var ratings = [
+    5,
+    3,
+    4.5
+];</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/arrays.png);">
+            <a class="source" href="http://www.rubyinside.com/media/poignant-guide.pdf">why's poignant guide to ruby</a>
+        </div>
+
+        <div class="slide">
+            <pre><code>var types = [
+    'urban_agriculture',
+    'biocentre',
+    'toilet_public'
+];</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>var types = [
+    'urban_agriculture',
+    'biocentre',
+    'toilet_public'
+];</code></pre>
+            <code>types[0]</code> is 'urban_agriculture'
+        </div>
+
+        <div class="slide">
+            <pre><code>var types = [
+    'urban_agriculture',
+    'biocentre',
+    'toilet_public'
+];</code></pre>
+            <code>types[1]</code> is 'biocentre'
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>objects</h2>
+        </div>
+
+        <div class="slide">
+            <h2>objects store structured data</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>var coordinates = {
+    latitude: 41.56,
+    longitude: -73.29
+};</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>you can think of objects like dictionaries</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>var coordinates = {
+    latitude: 41.56,
+    longitude: -73.29
+};</code></pre>
+            <code>coordinates.latitude</code> is 41.56
+        </div>
+
+        <div class="slide">
+            <h2>sometimes with "" around field names</h2>
+            <pre><code>var coordinates = {
+    "latitude": 41.56,
+    "longitude": -73.29
+};</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>objects and arrays can be combined</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>var data = {
+    "rows": [
+        {"count":208}
+    ],
+    "time":0.006,
+    "fields": {
+        "count": {"type":"number"}
+    },
+    "total_rows":1
+};</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 25px; line-height: 35px;"><code>var data = {
+    "rows": [
+        {"count":208}
+    ],
+    "time":0.006,
+    "fields": {
+        "count": {"type":"number"}
+    },
+    "total_rows":1
+};</code></pre>
+            <code>data.rows</code> is <pre><code>[
+    {"count":208}
+]</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 25px; line-height: 35px;"><code>var data = {
+    "rows": [
+        {"count":208}
+    ],
+    "time":0.006,
+    "fields": {
+        "count": {"type":"number"}
+    },
+    "total_rows":1
+};</code></pre>
+            <code>data.rows[0]</code> is <code>{"count":208}</code>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 25px; line-height: 35px;"><code>var data = {
+    "rows": [
+        {"count":208}
+    ],
+    "time":0.006,
+    "fields": {
+        "count": {"type":"number"}
+    },
+    "total_rows":1
+};</code></pre>
+            <code>data.rows[0].count</code> is <code>208</code>
+        </div>
+
+        <div class="slide">
+            <h2>getting data from Carto</h2>
+        </div>
+
+        <div class="slide">
+            <h2>with JavaScript you can ask Carto for any data from your datasets</h2>
+        </div>
+
+        <div class="slide">
+            <h2>this can be handy for showing summaries on a page</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/sql-api-example.png);">
+            <a class="source" href="http://jsbin.com/zotefoc/edit?html,output">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>or listing features</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/berlin-freespaces.png);">
+            <a class="source" href="http://www.berlinfreespaces.org/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>you do this by giving Carto the SQL, and it returns an object of data</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>var data = {
+    "rows": [
+        {"count":208}
+    ],
+    "time":0.006,
+    "fields": {
+        "count": {"type":"number"}
+    },
+    "total_rows":1
+};</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/sql-api-example.png);">
+            <h2>let's look at this example</h2>
+            <a class="source" href="http://jsbin.com/zotefoc/edit?html,output">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>sometimes you need more control than Carto gives you</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet.png); background-size: 30%;">
+        </div>
+
+        <div class="slide">
+            <h2>a few things leaflet does:</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-tiles.gif);">
+            <h2>tiles</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-popups.gif);">
+            <h2>popups</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-zoom-and-pan.gif);">
+            <h2>zoom and pan</h2>
+        </div>
+
+        <div class="slide">
+            <h2>leaflet is used all over the place</h2>
+        </div>
+
+        <div class="slide">
+            <h2>leaflet is used all over the place</h2>
+            <img style="float: left; max-width: 25%;" src="img/cartodb.png" />
+        </div>
+
+        <div class="slide">
+            <h2>leaflet is used all over the place</h2>
+            <img style="float: left; max-width: 25%;" src="img/cartodb.png" />
+        </div>
+
+        <div class="slide">
+            <h2>leaflet is used all over the place</h2>
+            <img style="float: left; max-width: 25%;" src="img/cartodb.png" />
+            <img style="float: left; max-width: 25%; background: white;" src="img/osm.svg" />
+        </div>
+
+        <div class="slide">
+            <h2>leaflet is used all over the place</h2>
+            <img style="float: left; max-width: 25%;" src="img/cartodb.png" />
+            <img style="float: left; max-width: 25%; background: white;" src="img/osm.svg" />
+            <p style="clear: both;">+ tons of other sites with maps on them</p>
+        </div>
+
+        <div class="slide">
+            <h2>3 steps:</h2>
+            <p>1. load leaflet's code</p>
+            <p>2. make a <code>div</code> for your map</p>
+            <p>3. tell leaflet to create the map</p>
+        </div>
+
+        <div class="slide">
+            <h2>1. load leaflet's code</h2>
+            <pre style="font-size: 30px; line-height: 40px;"><code>&lt;link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /&gt;
+&lt;script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>2. make a <code>div</code> for your map</h2>
+            <pre><code>&lt;body&gt;
+    &lt;div id="map"&gt;&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>3. tell leaflet to create the map</h2>
+            <pre style="font-size: 40px; line-height: 50px;"><code>var map = L.map('map').setView([40.70, -73.96], 11);</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>3a. add base tiles</h2>
+            <pre style="font-size: 25px; line-height: 35px;"><code>
+L.tileLayer('https://{s}.tiles.mapbox.com/v3/ebrelsford.ho06j5h0/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://mapbox.com">Mapbox</a>'
+}).addTo(map);</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-simple.png);">
+            <a href="http://jsbin.com/fiyumu/1/edit?html,output">
+                simple leaflet map
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/stamen-tiles.png);">
+            <h2>you can also use any other base tiles</h2>
+            <a href="http://maps.stamen.com/" class="source">
+                stamen maps
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>plugins</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-plugins.png);">
+            <a href="http://leafletjs.com/plugins.html" class="source" target="_blank">
+                leafletjs.com/plugins.html
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-magnifying-glass.png);">
+            <a href="https://github.com/bbecquet/Leaflet.MagnifyingGlass" class="source" target="_blank">
+                github.com/bbecquet/Leaflet.MagnifyingGlass
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-opacity-controls.png);">
+            <a href="https://github.com/lizardtechblog/Leaflet.OpacityControls" class="source" target="_blank">
+                github.com/lizardtechblog/Leaflet.OpacityControls
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-animated-marker.gif);">
+            <a class="source" href="https://github.com/openplans/Leaflet.AnimatedMarker" target="_blank">
+                github.com/openplans/Leaflet.AnimatedMarker
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cluster-plugin.png);">
+            <a class="source" href="https://github.com/Leaflet/Leaflet.markercluster" target="_blank">
+                github.com/Leaflet/Leaflet.markercluster
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-marker-cluster.gif);">
+            <a class="source" href="https://github.com/Leaflet/Leaflet.markercluster" target="_blank">
+                github.com/Leaflet/Leaflet.markercluster
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-control-geocoder.gif);">
+            <a href="https://github.com/perliedman/leaflet-control-geocoder" class="source" target="_blank">
+                leaflet-control-geocoder
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tangram-play.png);">
+            <a href="https://mapzen.com/tangram/play/?#10.3860/40.7331/-74.0457" class="source" target="_blank">
+                tangram play
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+        </div>
+
+    </body>
+</html>

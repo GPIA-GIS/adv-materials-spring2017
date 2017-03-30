@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>In-class Exercise | Advanced GIS</title>
+        <link href="../style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">Advanced GIS</a>
+                <h1>In-class Exercise: JavaScript</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Look at dropdowns</h2>
+                <ol>
+                    <li>Open <a href="https://bl.ocks.org/ebrelsford/796c27be2c610570d6b36d817ae80eda">this example</a> and copy the HTML (below the map) into a code editor (such as Brackets) and save it.</li>
+                    <li>Open the file in your browser.</li>
+                    <li>After the line
+                        <pre><code>var type = $('.type-picker').val();</code></pre>
+                        add the following line
+                        <pre><code>console.log(type);</code></pre>
+                    </li>
+                    <li>Reload the file in your browser, open developer tools, and pick various options in the dropdown. In the console are you should see the value of the dropdown being written out each time it changes.</li>
+                    <li>We're going to do the same thing with the SQL. Just <strong>before</strong> the line
+                        <pre><code>watsanLayer.setSQL(sql);</code></pre>
+                        Use <code>console.log()</code> to log out the value of the variable <code>sql</code>.
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Arrays</h2>
+                <ol>
+                    <li>Open a new tab in your browser and open developer tools.</li>
+                    <li>Copy and paste this code into the console:
+                        <pre><code>var types = [
+    'urban_agriculture',
+    'biocentre',
+    'toilet_public'
+];</code></pre>
+                        and press <code>Enter</code>
+                    </li>
+                    <li>In the console, type <pre><code>types[0]</code></pre> and press <code>Enter</code>.</li>
+                    <li>You should see the first item in <code>types</code>.</li>
+                    <li>Do the same for the second and third items in <code>types</code>.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Objects</h2>
+                <ol>
+                    <li>In the developer tools console, copy and paste this code:
+                        <pre><code>var coordinates = {
+    latitude: 41.56,
+    longitude: -73.29
+};</code></pre>
+                    </li>
+                    <li>Still in the console, type <pre><code>coordinates.latitude</code></pre> and press <code>Enter</code>.</li>
+                    <li>In a similar way, get the longitude from <code>coordinates</code>.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>

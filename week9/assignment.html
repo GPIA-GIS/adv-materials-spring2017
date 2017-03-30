@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Assignment 9 | Advanced GIS</title>
+        <link href='http://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">Advanced GIS</a>
+                <h1>Assignment 9: JavaScript</h1>
+            </header>
+
+            <section>
+                <h2>Resources</h2>
+                <ul>
+                    <li>The <a href="http://docs.cartodb.com/cartodb-platform/cartodb-js.html#core-api-functionallity">the Carto.js documentation</a> is pretty exhaustive...</li>
+                    <li>...and I'm maintaining <a href="https://gist.github.com/ebrelsford/3cfc899af2e4f36ed0ca62bada5f2226">this document that tracks where Carto.js is not fully functional and how you can work around that</a>.</li>
+                    <li>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Mozilla Developer Network</a> contains an excellent JavaScript reference.</li>
+                    <li><a href="https://www.khanacademy.org/computing/computer-programming/programming">Khan Academy</a></li>
+                    <li><a href="http://www.codecademy.com/tracks/javascript">Codecademy</a></li>
+                    <li><a href="http://eloquentjavascript.net/">Eloquent JavaScript</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Remember</h2>
+                <p>You have a <a id="" class="" title="Final Project Milestone" href="/courses/1340581/assignments/5717100" target="">final project milestone</a> due April 19th.</p>
+            </section>
+
+            <section>
+                <h2>Continue working with JavaScript</h2>
+                <p>There are numerous directions to go with JavaScript from this point. Pick <strong>one</strong> of the following activities based on which sounds most interesting to you or will be useful to you as you work on your final project. For each of these assumes you are loading a Carto map using HTML and JavaScript. You could continue with the page and map you have been using for the past few assignments, start a new one, or work on one that is more relevant to your project.</p>
+                <p>Your choices are:</p>
+
+                <section>
+                    <h3>(A) Add other data to your page</h3>
+                    <p>One way to think of this is like adding a widget but you can do whatever you want with it.</p>
+                    <p>Modify the page to show some basic statistics about your data using the <a href="https://carto.com/docs/carto-engine/sql-api">Carto SQL API</a> and JavaScript. <a href="http://jsbin.com/zotefoc/edit?html,output">This JS Bin</a> contains an example of finding the count putting it on a page. You could choose to show the range of some numeric field (MIN and MAX) or the total number of records or something else relevant to the map.</p>
+                </section>
+
+                <section>
+                    <h3>(B) Filter data using checkboxes, dropdowns, or text inputs</h3>
+                    <p>Learn a new way to filter data that other than buttons. Choose one or a few form inputs:</p>
+                    <ul>
+                        <li>checkboxes (<code>&lt;input type="checkbox" /&gt;</code>)</li>
+                        <li>text inputs (<code>&lt;input type="text" /&gt;</code>)</li>
+                        <li>dropdowns (<code>&lt;select&gt;</code>)</li>
+                    </ul>
+                    <p>When the user changes the input(s), your page should filter the data on your map using <code>setSQL()</code>.</p>
+                    <p><a href="http://htmldog.com/guides/html/beginner/forms/">This HTML Dog page</a> gets into specifics of many HTML form elements. <a href="https://jsbin.com/tayotow/edit?html,output">Here's an example of filtering with a text input</a>.</p>
+                </section>
+
+                <section>
+                    <h3>(C) Customize your Carto popups using Carto.js</h3>
+                    <p>This is particularly handy if you would like to embed content such as YouTube videos in your Carto popups, which is not possible through the Carto website.</p>
+                    <p>Customize your map's popups by creating a custom template for the popups in your HTML, then using Carto.js to tell the map to use your template. <a href="http://jsbin.com/dodosol/edit?html,output">This code example</a> should get you started, and <a href="https://bl.ocks.org/ebrelsford/248e9995bd0e403f1c2604641b43b291">this one</a> shows how to embed video.</p>
+                </section>
+
+                <section>
+                    <h2>Submitting your work</h2>
+                    Submit a link to the page on GitHub Pages.<br />
+                    <p>Please clearly indicate which activity you chose to do in the text entry. You may optionally choose to include a short paragraph response or summary of your work.</p>
+                </section>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
