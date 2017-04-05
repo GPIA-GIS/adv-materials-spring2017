@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>In-class Exercise | Advanced GIS</title>
+        <link href="../style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">Advanced GIS</a>
+                <h1>In-class Exercise</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Creating styles with Mapbox</h2>
+                <ol>
+                    <li>Create an account with <a href="https://www.mapbox.com/">Mapbox</a> if you don't already have one.</li>
+                    <li>Go to <strong>Styles</strong> and create a new style. When picking a template style, start with <strong>Bright</strong>.</li>
+                    <li>Edit the style. Start with the parks layer (<strong>Landuse &gt; landuse_park</strong>) and change the color and stroke of parks. Zoom into a city to see your handywork.</li>
+                    <li>Make the colors of the parks layer change by zoom level.</li>
+                    <li>Next look at streets (<strong>Roads &gt; road_street</strong>). What is the relationship between <strong>road_street</strong> and <strong>road_street_casing</strong>?</li>
+                    <li>Next look at buildings (<strong>Buildings &gt; building</strong> and <strong>Buildings &gt; building_top</strong>. What does <strong>building_top</strong> do?</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Using Mapbox styles in Carto</h2>
+                <ol>
+                    <li>Publish your style from Part 1.</li>
+                    <li>Click the <strong>Preview, develop, and use</strong> button once you publish it.</li>
+                    <li>From this page you will need the <strong>Access token</strong> from the <strong>Develop with this style</strong> section and the <strong>Integration URL</strong> from under <strong>Use style in GIS apps &gt; CartoDB</strong>.</li>
+                    <li>Open a Carto map.</li>
+                    <li>Click on the base map (the bottom layer).</li>
+                    <li>Under <strong>Source</strong> scroll over to and click <strong>Mapbox</strong>, then click the <strong>+</strong> under <strong>Style</strong>.</li>
+                    <li>Copy your <strong>Access token</strong> into <strong>Enter your access token</strong> and <strong>Integration URL</strong> into <strong>Enter your map id/url</strong>.</li>
+                    <li>Click <strong>Add basemap</strong> and your basemap from Mapbox should appear.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Adding your own data to Carto</h2>
+                <ol>
+                    <li>Select the rivers layer (<strong>Water &gt; waterway_river</strong>) and click the <strong>Select data</strong> tab.</li>
+                    <li>At what zoom level do  rivers become available?</li>
+                    <li>Let's say we want to make rivers visible when zoomed out more. <a href="http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_rivers_lake_centerlines.zip">Download Natural Earth's rivers data</a> and go to <strong>Tilesets</strong> in your Mapbox account and upload the zip file you downloaded. This will take a minute or two to upload and process.</li>
+                    <li>Go back to editing your style.</li>
+                    <li>Click <strong>New layer</strong>, then click the button next to <strong>Source</strong>. Find and click on the rivers under <strong>Unused sources</strong>. The name should start with <strong>ne_10m...</strong>.</li>
+                    <li>Set the <strong>Zoom</strong> max so that this layer does not overlap with the other rivers layer.</li>
+                    <li>Add a filter to only select features with scalerank less than 5&mdash;we only want to show the more prominent rivers.</li>
+                    <li>Click <strong>Create layer</strong> and style it.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
