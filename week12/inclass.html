@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>In-class Exercise | Advanced GIS</title>
+        <link href="../style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">Advanced GIS</a>
+                <h1>In-class Exercise</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Getting Universities from OpenStreetMap</h2>
+                <ol>
+                    <li>Open <a href="http://overpass-turbo.eu/">Overpass Turbo</a> and go to a relatively small urban area you're interested in.</li>
+                    <li>On the left replace any code with this:
+                    <pre><code>[out:json][timeout:25];
+(
+  node["amenity"="university"]({{bbox}});
+  way["amenity"="university"]({{bbox}});
+  relation["amenity"="university"]({{bbox}});
+);
+out body;
+>;
+out skel qt;</code></pre>
+                    </li>
+                    <li>Press <strong>Run</strong> and any matching features should be highlighted on the right.</li>
+                    <li>Press <strong>Export</strong> and download the features as a GeoJSON file.</li>
+                    <li>Upload the GeoJSON file to either Mapbox or Carto.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Getting other data from OpenStreetMap</h2>
+                <ol>
+                    <li>Using either the <strong>Map Data</strong> layer on <a href="http://www.openstreetmap.org/">OpenStreetMap</a> or the <a href="https://wiki.openstreetmap.org/"> OpenStreetMap wiki</a>, look for how something you're interested in is tagged.</li>
+                    <li>In Overpass Turbo, replace the tag in the previous example (<code>"amenity"="university"</code>) with the tag you found. For example, if you found <a href="https://wiki.openstreetmap.org/wiki/Tag:shop%3Dsupermarket">shop=supermarket</a> you would replace <code>"amenity"="university"</code> with <code>"shop"="supermarket"</code>.</li>
+                    <li>Press <strong>Run</strong> to run the query.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
